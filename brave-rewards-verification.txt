@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: shrawankpanthi.com.np
-Token: 419d03f852c4ab5cd7da26b24d9615c2717da605cacb98bab18e874a9c56374a
