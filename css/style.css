@@ -773,7 +773,7 @@ body.loaded .overlay_effect:after{
 	        transition: all .3s ease;
 }
 .shane_tm_button a:hover{
-	color: #000;
+	color: #ff0000;
 	background-color: transparent;
 }
 
