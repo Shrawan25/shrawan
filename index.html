@@ -26,6 +26,24 @@
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <!--[if lt IE 9]> <script type="text/javascript" src="js/modernizr.custom.js"></script> <![endif]-->
 <!-- /STYLES -->
+<!--style for research section-->
+<style>
+        .researchsection {
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .researchdetails {
+            display: none;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+        .email {
+            cursor: pointer;
+            text-decoration: underline;
+            color: blue;
+        }
+    </style>
+<!--/style for research section-->
 
 </head>
 
@@ -79,6 +97,8 @@
 					<ul class="anchor_nav">
 						<li class="current"><a href="#home">Home</a></li>
 						<li><a href="#about">About</a></li>
+						<li><a href="#research">Research</a></li>
+						<li><a href="#skils">Skills</a></li>
 						<li><a href="#portfolio">Certification</a></li>
 						<li><a href="#news">Creativity</a></li>
 						<li><a href="#contact">Contact</a></li>
@@ -99,6 +119,8 @@
 				<ul class="anchor_nav">
 					<li class="current"><a href="#home">Home</a></li>
 					<li><a href="#about">About</a></li>
+					<li><a href="#research">Research</a></li>
+					<li><a href="#skills">Skills</a></li>
 					<li><a href="#portfolio">Certification</a></li>
 					<li><a href="#news">Creativity</a></li>
 					<li><a href="#contact">Contact</a></li>
@@ -157,6 +179,143 @@ strong analytical and problem solving skills.</p>
 		</div>
 	</div>
 	<!-- /ABOUT -->
+
+	<!-- Research & notes -->
+	<div class="shane_tm_section" id="research">
+		<div class="shane_tm_portfolio">
+			<div class="container">
+				<div class="shane_tm_title">
+					<div class="title_flex">
+						<div class="left">
+							
+							<h3>Research & Tutorials</h3>
+						</div>
+						
+					</div>
+				</div>
+				       
+				<div>	
+				<!---Postgresql--->				
+			 							
+			<div class="researchsection" onclick="toggleDetailsPostgres()">
+				<li style="font-weight: 700;"">PostgreSQL</li> 
+				</div>
+           <div class="researchdetails" id="RdetailsPostgresSection">
+         
+        <h5></h5>
+        <a href="pdf/gettingstarted1.pdf" target="_blank">PostgreSQL Setup</a>
+        <h5></h5>
+        
+        <a href="pdf/gettingstarted1.pdf" target="_blank">PSQL Getting Started</a>
+        
+        <h5></h5>
+        <a href="pdf/Getting familiar with database and table.pdf" target="_blank">PSQL Getting Familiar with Database & Table</a>
+
+        <h5></h5>
+        <a href="pdf/practicing table on depth.pdf" target="_blank">PSQL Table in Depth</a>
+    </div>
+   
+							
+							<!---/Postgresql--->
+							<!---Pentaho--->
+							 							
+		  <div class="researchsection" onclick="toggleDetailsPentaho()">
+			<li style="font-weight: 700;"">Pentaho</li></div>
+    <div class="researchdetails" id="RdetailsPentahoSection">
+        <h5>Pentaho Setup</h5>
+        
+    <a href="img/portfolio/sid.pdf" target="_blank">PSQL Table in Depth</a>
+        
+        <h5></h5>
+        <p>comming soon</p>
+        
+        <h5></h5>
+        <p>comming soon</p>
+         </div>
+							
+							<!---/Pentaho--->
+							<!---US health--->
+														
+			<div class="researchsection" onclick="toggleDetailsUS()">
+				<li style="font-weight: 700;"">US Healthcare Terminologies</li> 
+				</div>
+    <div class="researchdetails" id="RdetailsUSSection">
+         <h5></h5>        
+      <a href="img/portfolio/sid.pdf" target="sid.pdf">Open or Download</a>
+        
+   							</div>
+							<!---/US health--->																				   </div>																		
+				</div>
+			</div>
+		</div>
+	
+
+	<script>
+        function toggleDetailsPostgres() {
+            var RdetailsSection = document.getElementById("RdetailsPostgresSection");
+            if (RdetailsSection.style.display === "none") {
+                RdetailsSection.style.display = "block";
+            } else {
+                RdetailsSection.style.display = "none";
+            }
+        }
+         function toggleDetailsPentaho() {
+            var RdetailsSection = document.getElementById("RdetailsPentahoSection");
+            if (RdetailsSection.style.display === "none") {
+                RdetailsSection.style.display = "block";
+            } else {
+                RdetailsSection.style.display = "none";
+            }
+        }
+        function toggleDetailsUS() {
+            var RdetailsSection = document.getElementById("RdetailsUSSection");
+            if (RdetailsSection.style.display === "none") {
+                RdetailsSection.style.display = "block";
+            } else {
+                RdetailsSection.style.display = "none";
+            }
+        }
+    </script>
+	<!-- /Research & notes -->
+
+	<!-- SKILLS -->
+	<div class="shane_tm_section" id="skills">
+		<div class="shane_tm_skills">
+			<div class="container">
+				<div class="skills_inner">
+					<div class="left">
+						<div class="shane_tm_title">
+							<h3>Skills & Expertise</h3>
+						</div>
+						<div class="text">
+							<p>I am skilled in PostgreSQL, AWS, Linux, Robotics & UAV. I am on the way to learn. I am searching for a place to sharpen and utilize my expertise. </p>
+						</div>
+					</div>
+					<div class="right"> 
+						<div class="tokyo_progress">
+							<div class="progress_inner" data-value="70">
+								<span><span class="label">PostgreSQL</span><span class="number">70%</span></span>
+								<div class="background"><div class="bar"><div class="bar_in"></div></div></div>
+							</div>
+							<div class="progress_inner" data-value="30" >
+								<span><span class="label">Linux</span><span class="number">30%</span></span>
+								<div class="background"><div class="bar"><div class="bar_in"></div></div></div>
+							</div>
+							<div class="progress_inner" data-value="50">
+								<span><span class="label">Amazon Web Services(AWS)</span><span class="number">50%</span></span>
+								<div class="background"><div class="bar"><div class="bar_in"></div></div></div>
+							</div>
+							<div class="progress_inner" data-value="50">
+								<span><span class="label">Robotics & UAV</span><span class="number">55%</span></span>
+								<div class="background"><div class="bar"><div class="bar_in"></div></div></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /SKILLS -->
 	
 	<!-- PORTFOLIO -->
 	<div class="shane_tm_section" id="portfolio">
@@ -248,51 +407,14 @@ strong analytical and problem solving skills.</p>
 	</div>
 	<!-- /PORTFOLIO -->
 	
-	<!-- SKILLS -->
-	<div class="shane_tm_section">
-		<div class="shane_tm_skills">
-			<div class="container">
-				<div class="skills_inner">
-					<div class="left">
-						<div class="shane_tm_title">
-							<h3>I have skills in AWS, RedHat Linux, SQL, Robotics & UAV</h3>
-						</div>
-						<div class="text">
-							<p>I am on the way to learn. I am searching for a place to sharpen and utilize my expertise. </p>
-						</div>
-					</div>
-					<div class="right"> 
-						<div class="tokyo_progress">
-							<div class="progress_inner" data-value="35">
-								<span><span class="label">Amazon Web Services(AWS)</span><span class="number">35%</span></span>
-								<div class="background"><div class="bar"><div class="bar_in"></div></div></div>
-							</div>
-							<div class="progress_inner" data-value="30" >
-								<span><span class="label">RedHat Linux</span><span class="number">30%</span></span>
-								<div class="background"><div class="bar"><div class="bar_in"></div></div></div>
-							</div>
-							<div class="progress_inner" data-value="50">
-								<span><span class="label">SQL</span><span class="number">50%</span></span>
-								<div class="background"><div class="bar"><div class="bar_in"></div></div></div>
-							</div>
-							<div class="progress_inner" data-value="50">
-								<span><span class="label">Robotics & UAV</span><span class="number">55%</span></span>
-								<div class="background"><div class="bar"><div class="bar_in"></div></div></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- /SKILLS -->
+	
 	
 	<!-- VIDEO -->
 	<div class="skp_tm_section">
 		<div class="skp_tm_talk">
 			
 			<div class="background1" id="talk1">
-				<a class="player" data-property="{videoURL:'https://youtu.be/c5P0ffeEks4',containment:'#talk1',autoPlay:true, loop:true, showControls:false, mute:true, startAt:0,opacity:1, quality:'default'}"></a>
+				<a class="player" data-property="{videoURL:'https://youtu.be/c5P0ffeEks4',containment:'#talk1',autoPlay:true, loop:true, showControls:false, mute:true, startAt:0,opacity:1}"></a>
 				<div class="overlay"></div>
 			</div>
 			<div class="talk_inner1">
@@ -321,7 +443,7 @@ strong analytical and problem solving skills.</p>
 							<div class="list_inner">
 								<div class="image">
 									<img src="img/creativity/drone.jpg" alt="" />
-									<div class="main" data-img-url="img/creativity/drone.jpg"></div>									
+									<div class="main" data-img-url="img/creativity/drone.png"></div>									
 								</div>
 								<div class="details">
 									<h1 class="title"><a href="#">Racing Drone</a></h1>
@@ -429,7 +551,7 @@ strong analytical and problem solving skills.</p>
 			</div>
 		</div>
 	</div>
-	<!-- /creativity -->
+	<!-- /NEWS -->
 	
 	<!-- TALK -->
 	<div class="shane_tm_section" id="contact">
@@ -442,82 +564,40 @@ strong analytical and problem solving skills.</p>
 			<div class="talk_inner">
 				<div class="text">
 					<h3>Anything to say?</h3>
+					<h3 style="font-weight: 200;">Click the link below</h3>					
 				</div>
 				<div class="button">
-					<a href="#">Make an enquiry</a>
+					<a href="#"><p class="email" onclick="copyEmail()">shrawankpanthi@gmail.com</p></a>
 				</div>
+				<h5>...</h5>
+				
+				  <h2><a href="https://www.linkedin.com/in/shrawan-panthi-9957b5141" target="_blank"><p  style="color: yellowgreen;">Connect in LinkedIn</p></a></h2>    
+
+
+
+    
 			</div>
 		</div>
 	</div>
+	<script>
+        function copyEmail() {
+            const emailElement = document.querySelector('.email');
+            const email = emailElement.innerText;
+
+            const textarea = document.createElement('textarea');
+            textarea.value = email;
+            textarea.style.position = 'fixed';
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+
+            alert('Email copied to clipboard: ' + email);
+        }
+    </script>
 	<!-- /TALK -->
 	
-	<!-- MODAL CONTACT -->
-	<div class="shane_tm_mobalbox_contact">
-		<div class="box_inner">
-			<div class="close">
-				<a href="#"><img class="svg" src="img/svg/cancel.svg" alt="" /></a>
-			</div>
-			<div class="description_wrap scrollable">
-				<div class="title">
-					<h3>Get in touch</h3>
-				</div>
-				<div class="wrapper">
-					<div class="left">
-						<div class="fields">
-							<form action="/" method="post" class="contact_form" id="contact_form" autocomplete="off">
-								<div class="returnmessage" data-success="Your message has been received, We will contact you soon."></div>
-								<div class="empty_notice"><span>Please Fill Required Fields</span></div>
-								<div class="first">
-									<ul>
-										<li>
-											<input id="name" type="text" placeholder="Name">
-										</li>
-										<li>
-											<input id="email" type="text" placeholder="Email">
-										</li>
-									</ul>
-								</div>
-								<div class="last">
-									<textarea id="message" placeholder="Message"></textarea>
-								</div>
-								<div class="shane_tm_button" data-position="left">
-									<a id="send_message" href="#">
-										<span>Send Message</span>
-									</a>
-								</div>
-
-								<!-- If you want to change mail address to yours, please open modal.php and go to line 4 -->
-
-							</form>
-						</div>
-					</div>
-					<div class="right">
-						<div class="map_wrap">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.8970979340897!2d83.46168636470097!3d27.68957513288038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39968662af7e7e57%3A0x5a6ebfecb8ba4a16!2sMilan%20Chowk%2C%20Butwal%2032907!5e0!3m2!1sen!2snp!4v1622642565787!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-						</div>
-					</div>	
-				</div>	
-				<div class="short_info">
-					<ul>
-						<li>
-							<div class="list_inner">
-								<img class="svg" src="img/svg/location.svg" alt="" />
-								<p>Butwal, Nepal</p>
-							</div>
-						</li>
-						<li>
-							<div class="list_inner">
-								<img class="svg" src="img/svg/phone.svg" alt="" />
-								<p><a href="tel:+977 9817550454">+977 9817550454</a></p>
-							</div>
-						</li>
-						
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- MODAL CONTACT -->
+	
 	
 	<!-- COPYRIGHT -->
 	<div class="shane_tm_section">
@@ -544,7 +624,7 @@ strong analytical and problem solving skills.</p>
 <!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]-->	
 <script src="js/plugins.js"></script>
 <script src="js/init.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5bpEs3xlB8vhxNFErwoo3MXR64uavf6Y&callback=initMap"></script>
+
 <!-- /SCRIPTS -->
 
 </body>
