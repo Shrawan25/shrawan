@@ -142,8 +142,8 @@
 
 .shane_tm_all_wrap[data-color="black"] .shane_tm_topbar .menu ul li.current a{color: #000;}
 .shane_tm_all_wrap[data-color="black"] .shane_tm_topbar .menu ul li a:hover{color: #000;}
-.shane_tm_all_wrap[data-color="black"] .shane_tm_hero .content h3{color: #000;}
-.shane_tm_all_wrap[data-color="black"] .shane_tm_hero .content h3 span{-webkit-text-stroke: 1px #000;}
+.shane_tm_all_wrap[data-color="black"] .shane_tm_hero .content h3{color: #ff0000;}
+.shane_tm_all_wrap[data-color="black"] .shane_tm_hero .content h3 span{-webkit-text-stroke: 1px #ff0000;}
 .shane_tm_all_wrap[data-color="black"] .shane_tm_title span{background-color:rgba(0,0,0,.05);}
 .shane_tm_all_wrap[data-color="black"] .shane_tm_button a{background-color:#000;border-color: #000;}
 .shane_tm_all_wrap[data-color="black"] .shane_tm_button a:hover{background-color:transparent;}
