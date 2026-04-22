@@ -1792,8 +1792,87 @@
                 font-size: 12px;
             }
             
+            .hero {
+                margin-top: 60px;
+                min-height: auto;
+                padding: 40px 20px;
+                overflow-x: hidden;
+            }
+
+            .hero-content {
+                z-index: 2;
+                position: relative;
+                padding: 20px;
+                text-align: center;
+            }
+
             .hero h1 {
                 font-size: 42px;
+            }
+
+            .data-title {
+                font-size: 1.8em;
+                letter-spacing: 1px;
+                animation: titleReveal 4s ease-out forwards, titleCrawl 25s ease-in-out 4s infinite;
+            }
+
+            .query-effect {
+                animation: titleReveal 4s ease-out forwards, titleCrawl 35s ease-in-out 4s infinite;
+            }
+
+            @keyframes titleCrawlMobile {
+                0% {
+                    transform: translateX(0);
+                }
+                5% {
+                    transform: translateX(0);
+                }
+                50% {
+                    transform: translateX(calc(80vw - 300px));
+                }
+                75% {
+                    transform: translateX(calc(80vw - 320px));
+                }
+                85% {
+                    transform: translateX(calc(80vw - 310px));
+                }
+                95% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(0);
+                }
+            }
+
+            .hero-content p {
+                font-size: 14px;
+                margin-bottom: 30px;
+                line-height: 1.5;
+            }
+
+            .hero-buttons {
+                gap: 10px;
+                justify-content: center;
+            }
+
+            .btn {
+                padding: 10px 25px;
+                font-size: 12px;
+                letter-spacing: 1px;
+            }
+
+            .hero-animations {
+                display: none;
+            }
+
+            .db-servers,
+            .security-shield,
+            .tech-metrics,
+            .network-nodes,
+            .data-particles,
+            .data-flow,
+            .click-marker {
+                display: none !important;
             }
             
             .section-title h2 {
@@ -1811,6 +1890,35 @@
             
             .skills-grid {
                 grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 30px 15px;
+            }
+
+            .data-title {
+                font-size: 1.4em;
+                letter-spacing: 0px;
+            }
+
+            .hero-content p {
+                font-size: 12px;
+                margin-bottom: 20px;
+            }
+
+            .btn {
+                padding: 8px 20px;
+                font-size: 11px;
+            }
+
+            .query-effect {
+                animation: titleReveal 4s ease-out forwards, titleCrawl 40s ease-in-out 4s infinite;
+            }
+
+            .caterpillar-char {
+                animation: charReveal 0.5s ease-out forwards, caterpillarWiggle 0.8s ease-in-out 4s infinite;
             }
         }
         
@@ -2098,6 +2206,18 @@
         /* Database Query Animation */
         .query-effect {
             position: relative;
+            animation: titleReveal 4s ease-out forwards, titleCrawl 25s ease-in-out 4s infinite;
+        }
+
+        @keyframes titleReveal {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
         .query-effect::before {
@@ -2117,6 +2237,103 @@
         @keyframes queryPulse {
             0%, 100% { opacity: 0; transform: translateY(0); }
             50% { opacity: 0.8; transform: translateY(-5px); }
+        }
+
+        @keyframes titleCrawl {
+            0% {
+                transform: translateX(0);
+            }
+            5% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(calc(100vw - 400px));
+            }
+            75% {
+                transform: translateX(calc(100vw - 450px));
+            }
+            85% {
+                transform: translateX(calc(100vw - 410px));
+            }
+            95% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* Caterpillar Character Effect */
+        .caterpillar-char {
+            display: inline-block;
+            animation: charReveal 0.5s ease-out forwards, caterpillarWiggle 0.8s ease-in-out 4s infinite;
+            background: linear-gradient(135deg, #4ade80, #22c55e, #4ade80);
+            background-size: 200% 200%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: #4ade80;
+        }
+
+        @keyframes charReveal {
+            0% {
+                opacity: 0;
+                transform: scaleX(0.5) scaleY(1.2) translateY(-10px);
+            }
+            100% {
+                opacity: 1;
+                transform: scaleX(1) scaleY(1) translateY(0);
+            }
+        }
+
+        @keyframes caterpillarWiggle {
+            0%, 100% {
+                transform: scaleX(1) scaleY(1);
+            }
+            25% {
+                transform: scaleX(1.1) scaleY(0.95);
+            }
+            50% {
+                transform: scaleX(0.95) scaleY(1.1);
+            }
+            75% {
+                transform: scaleX(1.05) scaleY(0.98);
+            }
+        }
+
+        @keyframes caterpillarCrawl {
+            0% {
+                opacity: 0;
+                transform: translateX(-600px) scaleX(0.8) scaleY(1.1);
+            }
+            10% {
+                opacity: 1;
+                transform: translateX(-500px) scaleX(1) scaleY(1);
+            }
+            25% {
+                transform: translateX(-200px) scaleX(1.15) scaleY(0.9);
+            }
+            40% {
+                transform: translateX(200px) scaleX(1.1) scaleY(0.95);
+            }
+            50% {
+                opacity: 1;
+                transform: translateX(500px) scaleX(1) scaleY(1);
+            }
+            60% {
+                transform: translateX(200px) scaleX(1.15) scaleY(0.9);
+            }
+            75% {
+                transform: translateX(-200px) scaleX(1.1) scaleY(0.95);
+            }
+            90% {
+                opacity: 1;
+                transform: translateX(-500px) scaleX(1) scaleY(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translateX(-600px) scaleX(0.8) scaleY(1.1);
+            }
         }
         
         /* Distortion Animation */
@@ -2181,7 +2398,7 @@
                     </div>
                     <div class="terminal-line command-line">
                         <span class="terminal-prompt">$</span>
-                        <span class="terminal-text typing">Setting up PostgreSQL connection</span>
+                        <span class="terminal-text typing">Setting up PostgreSQL</span>
                         <span class="cursor">|</span>
                     </div>
                 </div>
@@ -2210,7 +2427,7 @@
 
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1 class="data-title query-effect" data-text="DBA & DatabaseEngineer">DBA & Database Engineer</h1>
+            <h1 class="data-title query-effect" data-text="DBA & DatabaseEngineer">DBA & Database<span>Engineer</span></h1>
             <p>Designing high-performance databases, optimizing workflows, and building scalable data platforms with PostgreSQL, MySQL, MongoDB, AWS, and Spark.</p>
             <div class="hero-buttons">
                 <a href="#about" class="btn btn-primary">Learn More</a>
@@ -2741,7 +2958,7 @@
                 
                 const typingText = document.querySelector('.typing');
                 const cursor = document.querySelector('.cursor');
-                const fullText = 'call portfolio';
+                const fullText = 'calling portfolio';
                 let charIndex = 0;
                 
                 const typeWriter = () => {
@@ -2820,66 +3037,38 @@
                 heroObserver.observe(heroSection);
             }
 
-            const navLinks = document.querySelectorAll('.nav-links a');
-            window.addEventListener('scroll', function() {
-                let current = '';
-                document.querySelectorAll('section').forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    if (scrollY >= (sectionTop - 200)) {
-                        current = section.getAttribute('id');
-                    }
-                });
+            // Initialize caterpillar effect for title
+            const initCaterpillarEffect = () => {
+                const titleElement = document.querySelector('.query-effect');
+                if (!titleElement) return;
                 
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href').slice(1) === current) {
-                        link.classList.add('active');
-                    }
-                });
-            });
-
-            function toggleResearch(element) {
-                element.classList.toggle('active');
-            }
-
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth' });
-                    }
-                });
-            });
-
-            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-            let audioUnlocked = false;
-
-            const unlockAudio = () => {
-                if (audioUnlocked) return;
-                audioContext.resume().then(() => {
-                    audioUnlocked = true;
-                }).catch(() => {
-                    audioUnlocked = false;
+                // Get text from data-text attribute for consistency
+                const text = titleElement.getAttribute('data-text') || 'DBA & Database Engineer';
+                titleElement.innerHTML = '';
+                
+                let charIndex = 0;
+                text.split('').forEach((char) => {
+                    const span = document.createElement('span');
+                    span.className = 'caterpillar-char';
+                    span.textContent = char;
+                    span.style.animationDelay = `${charIndex * 0.06}s`;
+                    titleElement.appendChild(span);
+                    charIndex++;
                 });
             };
+            
+            initCaterpillarEffect();
 
-            const playTone = (frequency) => {
-                if (!audioUnlocked || !audioContext) return;
-                const now = audioContext.currentTime;
-                const oscillator = audioContext.createOscillator();
-                const gain = audioContext.createGain();
-                oscillator.frequency.setValueAtTime(frequency, now);
-                oscillator.type = 'sine';
-                gain.gain.setValueAtTime(0.001, now);
-                gain.gain.exponentialRampToValueAtTime(0.22, now + 0.02);
-                gain.gain.exponentialRampToValueAtTime(0.001, now + 0.18);
-                oscillator.connect(gain);
-                gain.connect(audioContext.destination);
-                oscillator.start(now);
-                oscillator.stop(now + 0.2);
-            };
+        }
 
+        let audioUnlocked = false;
+        let heroAnimationStarted = false;
+        let audioContext = null;
+
+        try {
+            audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        } catch (e) {
+            console.warn('Audio Context not supported');
         }
 
         const navLinks = document.querySelectorAll('.nav-links a');
@@ -2913,10 +3102,6 @@
                 }
             });
         });
-
-        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-        let audioUnlocked = false;
-        let heroAnimationStarted = false;
 
         const unlockAudio = () => {
             if (audioUnlocked) return;
